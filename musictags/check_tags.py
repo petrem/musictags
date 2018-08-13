@@ -46,7 +46,7 @@ _debug = partial(_info, color="cyan")
 
 
 def _list_get_first(l):
-    return l[0] if len(l) > 0 else None
+    return l[0] if l else None
 
 
 def id3_tags_presence(spec, tag):
@@ -69,7 +69,7 @@ def check_tags(filepath, verbose=False):
     audio = mutagen.File(filepath)
     if audio is None:
         _warn("[FILE] {} ... skipping (not recognized)".format(filepath))
-        return
+        return None
     if isinstance(audio.tags, mutagen.id3.ID3):
         if verbose:
             _info("[FILE] {}".format(filepath))
@@ -97,8 +97,8 @@ def check_tags(filepath, verbose=False):
             mandatory/len(ID3_MANDATORY),
             album/len(ID3_ALBUM),
             useful/len(ID3_USEFUL))
-    else:
-        _warn("[FILE] {} ... skipping (unsupported tag type)".format(filepath))
+    _warn("[FILE] {} ... skipping (unsupported tag type)".format(filepath))
+    return None
 
 
 def _canonical_relpath(path):
@@ -134,7 +134,7 @@ def dir_expand(file_or_dir):
     if os.path.isfile(path):
         yield file_or_dir
     elif os.path.isdir(file_or_dir):
-        for dirpath, dirs, files in os.walk(file_or_dir):
+        for dirpath, _, files in os.walk(file_or_dir):
             if _is_ignored_dir(dirpath):
                 continue
             yield (
