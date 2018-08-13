@@ -2,6 +2,8 @@
 
 - check behavior for missing id3 tag
 - check behavior for older id3 versions
+- check behavior for broken symlinks and other snags (dir_expand)
+- should I follow symlinks to directories? (dir_expand)
 
 2. Enhancements
 

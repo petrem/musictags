@@ -130,8 +130,6 @@ def _is_ignored_file(filepath):
 def dir_expand(file_or_dir):
     """Generates paths to the file or the files in the provided directory,
     recursively"""
-    # TODO: check behavior for broken symlinks and other snags
-    # TODO: to follow or not to follow symlinks to directories?
     path = _canonical_relpath(file_or_dir)
     if os.path.isfile(path):
         yield file_or_dir
