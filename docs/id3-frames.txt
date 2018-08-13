@@ -1,0 +1,58 @@
+From http://id3.org/id3v2.4.0-frames
+
+
+# Localization (album, position)
+
+TALB Album/Movie/Show title
+
+TPOS Part of a set (like for a multi-cd, 1/2)
+TSST Set subtitle
+
+TRCK Track number/Position in set
+
+TOAL Original album/movie/show title
+
+
+# Titles
+
+TIT1 Content group description (if multiple titles are in a group, eg. "Piano Concerto")
+TIT2 Title/songname/content description
+TIT3 Subtitle/Description refinement
+
+
+# People involved
+
+TPE1 Lead performer(s)/Soloist(s)
+TPE2 Band/orchestra/accompaniment
+TPE3 Conductor/performer refinement
+TPE4 Interpreted, remixed, or otherwise modified by
+
+TEXT Lyricist/Text writer
+TCOM Composer
+
+TOPE Original artist(s)/performer(s)
+TOLY Original lyricist(s)/text writer(s)
+
+
+# Content
+
+TCON Content type (Genre)
+
+
+# Dates
+
+TDOR Original release time
+TDRC Recording time (?)
+TDRL Release time
+
+
+# Sort strings
+
+TSOA Album sort order
+TSOP Performer sort order
+TSOT Title sort order
+
+
+# File name
+
+TOFN Original filename (preserve filename over daft media)

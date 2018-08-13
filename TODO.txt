@@ -1,0 +1,16 @@
+1. Bugs and tests to perform
+
+- check behavior for missing id3 tag
+- check behavior for older id3 versions
+
+2. Enhancements
+
+2.1 Album detection: when some files in a dir have the same TALB, assume dir is an album. Then the album score should depend on this.
+
+2.2. Display expected but missing tags
+
+2.3 Check actual file name to conform to a specified format
+
+2.4 Check TOFN (original file name)
+
+2.5 Add simple fixes: rename, fill in TOFN
