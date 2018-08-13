@@ -9,7 +9,7 @@ setuptools.setup(
     description='stuff done on a whim',
     author='Petre Mierlutiu',
     author_email='petrem@gmail.com',
-    url='https://bitbucket.org/petrem/musictags',
+    url='https://github.com/petrem/musictags',
     license='proprietary/not decided',
     platforms=["any"],
     classifiers=["Development Status :: 2 - Pre-Alpha",
